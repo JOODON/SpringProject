@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FirstController {
     @GetMapping("/HelloUser")
     public String Hi(Model model){
-        model.addAttribute("Username","동호");
+        model.addAttribute("Username","사용자");
         return "greetings";//브라우저로 전송시켜줌
     }
 }
