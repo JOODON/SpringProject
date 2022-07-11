@@ -64,6 +64,19 @@
         .Board{
             display: none;
         }
+        .bt{
+            display: flex;
+            justify-content: center;
+        }
+        .sub-bt{
+            margin-top: 50px;
+            width: 1200px;
+            height: 50px;
+            background: white;
+            border: 3px solid #EEE3F8;
+            border-radius: 10px;
+            color: #ACABAB;
+        }
     </style>
     <script>
         $(function (){
@@ -92,14 +105,18 @@
     <div class="title">
         <h1> 게시글 쓰기</h1>
     </div>
-
+<form class="container" action="/articles/create" method="post">
     <div class="texthead">
-        <input type="text" placeholder="게시글 제목" class="texttitle">
+        <input type="text" placeholder="게시글 제목" class="texttitle" name="title">
     </div>
 
     <div class="textbody">
-        <textarea placeholder="게시글 " name="Hello" class="textvalue"></textarea>
+        <textarea placeholder="게시글" name="content" class="textvalue"></textarea>
     </div>
+    <div class="bt">
+        <button type="submit"class="sub-bt">제출하기</button>
+    </div>
+</form>
 </div>
 </body>
 </html>

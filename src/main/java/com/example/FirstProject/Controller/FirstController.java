@@ -1,9 +1,9 @@
-
 package com.example.FirstProject.Controller;
-
+import com.example.FirstProject.DTO.ArticleFrom;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class FirstController {
@@ -17,8 +17,15 @@ public class FirstController {
         model.addAttribute("nickname","동호");
         return "layouts/goodbye";//브라우저로 전송시켜줌
     }
-    @GetMapping("/main")
-    public String main(Model model){
-        return "header";
+    @GetMapping("/articles/new")
+    public String newForm(){
+        return "articles/header";
+    }
+
+    @PostMapping("/articles/create")
+    public String createAricle(ArticleFrom from){
+        System.out.println(from.toString());
+        return "articles/header";
     }
 }
+
