@@ -17,18 +17,6 @@ public class FirstController {
         model.addAttribute("nickname","동호");
         return "layouts/goodbye";//브라우저로 전송시켜줌
     }
-    @GetMapping("/articles/new")
-    public String newForm(){
-        return "articles/header";
-    }
 
-    @PostMapping("/articles/create")
-    public String createAricle(ArticleFrom from){
-        System.out.println(from.toString());
-        //1. DTO를 Entity로 변환 !
-        Article article = form.toEntity();
-        //2. Repository 에게 Entity DB안에 저장하게함 !
-        return "articles/header";
-    }
 }
 
