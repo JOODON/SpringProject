@@ -25,6 +25,9 @@ public class FirstController {
     @PostMapping("/articles/create")
     public String createAricle(ArticleFrom from){
         System.out.println(from.toString());
+        //1. DTO를 Entity로 변환 !
+        Article article = form.toEntity();
+        //2. Repository 에게 Entity DB안에 저장하게함 !
         return "articles/header";
     }
 }
