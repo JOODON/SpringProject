@@ -1,5 +1,7 @@
 package com.example.FirstProject.DTO;
 
+import com.example.FirstProject.Entity.Article;
+
 public class ArticleFrom {
     private String title;
     private String content;
@@ -28,4 +30,7 @@ public class ArticleFrom {
                 '}';
     }
 
+    public Article toEntity() {
+        return new Article(null,title,null);
+    }
 }
